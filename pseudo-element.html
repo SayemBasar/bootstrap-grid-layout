@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        h1::before {
+            content: 'hello';
+            color: lime;
+        }
+
+        blockquote::before {
+            content: open-quote;
+            color: red;
+            font-size: 1.5em;
+        }
+
+        blockquote::after {
+            content: close-quote;
+            color: red;
+            font-size: 1.5em;
+        }
+
+        .sec-title {
+            display: inline-block;
+        }
+
+        .sec-title::after,
+        .sec-title:hover::before {
+            content: '';
+            display: block;
+            background-color: mediumaquamarine;
+            height: 2px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Having fun with pseudo element. let's do it.</h1>
+    <section>
+        <h2 class="sec-title">Best Quotes</h2>
+        <blockquote>Patience, persistence and perspiration make an unbeatable combination for success
+        </blockquote>
+
+        <blockquote>Desire is the starting point of all achievement, not a hope, not a wish, but a keen pulsating desire
+            which transcends everything</blockquote>
+
+        <blockquote>Strength and growth come only through continuous effort and struggle…</blockquote>
+    </section>
+</body>
+
+</html>
